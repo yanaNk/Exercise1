@@ -57,6 +57,11 @@ CMakeCache.txt
 Makefile
 cmake_install.cmake
 
+# Ignore CMake build directories
+cmake-build-debug/
+cmake-build-release/
+cmake-build-*/
+
 # Ninja build files
 *.ninja
 .ninja_deps

@@ -1,0 +1,1 @@
+add_executable(count_zero_bits count_zero_bits.c)

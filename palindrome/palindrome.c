@@ -32,26 +32,27 @@ int is_whitespace(char character);
  * ------------------------
  *   Checks whether the given array of chars is palindrome.
  *
- *   s: the string to check (the array of chars we want to check that we want to check).
+ *   s: the string to check (the array of chars we want to check).
  *
  *   returns: 1 if the array represents a palindrome; 0 otherwise.
  */
-int palindrome(char s[]);
+int palindrome(char s[size]);
 
 int main() {
   char input_string[ size ];
   printf("Hello please enter the string you are willing to check\n");
-  scanf("%[^\n]", input_string);
+  fgets(input_string, size, stdin);
   printf("You have entered: %s\n", input_string);
   if (palindrome(input_string)) {
     printf("It's a palindrome!\n");
   } else {
     printf("Not a palindrome.\n");
   }
+  return 0;
 }
 
 int is_whitespace(char character){
-  const char whitespace_chars[] = {' ', '\t', '\n','\v'};
+  const char whitespace_chars[] = {' ', '\t', '\n','\v','\r', '\f'};
   int j=0;
   for(j=0; j < sizeof(whitespace_chars); j++){
     if(whitespace_chars[j] == character) {

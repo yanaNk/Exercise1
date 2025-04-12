@@ -5,7 +5,7 @@
 /*
 * Program: Checks if palindrome
 * Description:
-*   Checks if a given string is a palindrome,the given string is passed by the user as a single input.txt line.
+*   Checks if a given string is a palindrome,the given string is passed by the user as a single input line.
 *   Whitespaces characters like: tabs and spaces are ignored.
 * Input:
 *   String with max length of 80 entered by the user

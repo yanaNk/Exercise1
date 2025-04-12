@@ -1,3 +1,7 @@
+#include <stdio.h>
+#include <string.h>
+#include "data.h"
+
 /*
 * Program: Checks if palindrome
 * Description:
@@ -12,9 +16,7 @@
 *   "Not a palindrome" if the string is not palindrome.
 */
 
-#include <stdio.h>
-#include <string.h>
-#include "data.h"
+
 
 /*
  * Function: is_whitespace
@@ -53,8 +55,8 @@ int main() {
 
 int is_whitespace(char character){
   const char whitespace_chars[] = {' ', '\t', '\n','\v','\r', '\f'};
-  int j=0;
-  for(j=0; j < sizeof(whitespace_chars); j++){
+  int j = 0;
+  for(j = 0; j < sizeof(whitespace_chars); j++){
     if(whitespace_chars[j] == character) {
       return 1;
     }

@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "data.h"
 
 /*
  * Function: count_zero_bits
@@ -9,7 +10,7 @@
  *
  *   returns: number of zeroes in the binary form of the number
  */
-int count_zero_bits(unsigned int value);
+int count_zero_bits(unit value);
 /*
 * Program: Checks how many zeroes are in binary form of number
 * Description:
@@ -32,11 +33,10 @@ int main() {
     return 0;
 }
 
-int count_zero_bits(unsigned int value) {
+int count_zero_bits(unit value) {
     int num_zeroes = 0;
-    int number_bits = sizeof(unsigned int) * 8;
     int i;
-    for(i = 0; i < number_bits; i++)
+    for(i = 0; i < NUMBER_OF_BITS; i++)
     {
         if ((value >> i & 1) == 0)
             num_zeroes++;

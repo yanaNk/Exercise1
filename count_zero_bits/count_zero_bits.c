@@ -1,16 +1,7 @@
 #include <stdio.h>
-#include "data.h"
+#include "count_zero_bits.h"
 
-/*
- * Function: count_zero_bits
- * ------------------------
- *   Counts how many bits in the binary form of a number are zero
- *
- *   value: the number to check.
- *
- *   returns: number of zeroes in the binary form of the number
- */
-int count_zero_bits(unit value);
+
 /*
 * Program: Checks how many zeroes are in binary form of number
 * Description:
@@ -25,15 +16,15 @@ int count_zero_bits(unit value);
 int main() {
     unsigned int input_number;
     int zeroes;
-    printf("Please enter a number in decimal base: ");
+    printf("Please enter a number in decimal base: \n");
     scanf("%u", &input_number);
     zeroes = count_zero_bits(input_number);
     printf("The number that was entered is %u\n", input_number);
-    printf("%d contains in binary form %d zeroes", input_number, zeroes);
+    printf("The binary representation of %u contains %d zero bits.\n", input_number, zeroes);
     return 0;
 }
 
-int count_zero_bits(unit value) {
+int count_zero_bits(uint value) {
     int num_zeroes = 0;
     int i;
     for(i = 0; i < NUMBER_OF_BITS; i++)
